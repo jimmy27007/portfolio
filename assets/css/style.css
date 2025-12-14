@@ -32,7 +32,9 @@ body{
   min-height:100vh;
   overflow-x:hidden;
 }
-
+main{
+  z-index:-5;
+}
 /* ===== Data canvas ===== */
 #matrix{
   position:fixed;
@@ -242,4 +244,5 @@ p{
   object-fit:cover;
   display:block;
 }
+
 
