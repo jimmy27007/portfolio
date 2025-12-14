@@ -33,8 +33,9 @@ body{
   overflow-x:hidden;
 }
 main{
-  z-index:-5;
+  z-index:-10;
 }
+
 /* ===== Data canvas ===== */
 #matrix{
   position:fixed;
@@ -217,7 +218,6 @@ p{
   grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
   gap:26px;
   margin-top:32px;
-  z-index:-5;
 }
 
 .gallery-item{
@@ -244,5 +244,3 @@ p{
   object-fit:cover;
   display:block;
 }
-
-
