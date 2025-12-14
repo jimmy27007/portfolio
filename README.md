@@ -1,5 +1,3 @@
-# portfolio
-This is my portfolio showing my skills, experience, education and interests
 # James Kariuki - Portfolio Website
 
 A modern, interactive portfolio website showcasing professional experience, projects, and expertise in data analysis, econometrics, and statistical modeling.
