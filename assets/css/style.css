@@ -1,0 +1,243 @@
+:root{
+  --bg1:#0B141A;
+  --bg2:#111B21;
+
+  --glass-bg:rgba(255,255,255,.08);
+  --glass-bg-strong:rgba(255,255,255,.14);
+  --glass-border:rgba(255,255,255,.22);
+  --glass-highlight:rgba(255,255,255,.35);
+
+  --primary:#25D366;
+  --secondary:#128C7E;
+
+  --text:#E9EDEF;
+  --muted:#9BA5AB;
+
+  --shadow-strong:0 40px 120px rgba(0,0,0,.7);
+  --shadow-soft:0 10px 30px rgba(0,0,0,.45);
+
+  --max:1100px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Inter,system-ui,sans-serif;
+  background:radial-gradient(circle at top,var(--bg2),var(--bg1));
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* ===== Data canvas ===== */
+#matrix{
+  position:fixed;
+  inset:0;
+  z-index:5;
+  pointer-events:none;
+  opacity:.22;
+}
+
+/* ===== Glass base ===== */
+.glass{
+  position:relative;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.22),
+      rgba(255,255,255,.05)
+    ),
+    var(--glass-bg);
+  backdrop-filter:blur(28px) saturate(160%);
+  -webkit-backdrop-filter:blur(28px) saturate(160%);
+  border-radius:26px;
+  border:1px solid var(--glass-border);
+  box-shadow:var(--shadow-strong);
+  overflow:hidden;
+}
+
+/* Inner light reflection */
+.glass::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      120deg,
+      transparent 35%,
+      var(--glass-highlight) 50%,
+      transparent 65%
+    );
+  opacity:.25;
+  pointer-events:none;
+}
+
+/* ===== Layout ===== */
+.container{
+  max-width:var(--max);
+  margin:100px auto;
+  padding:34px;
+}
+
+/* ===== Typography ===== */
+h1,h2,h3{
+  font-weight:700;
+  letter-spacing:-.5px;
+}
+
+p{
+  line-height:1.8;
+  color:var(--muted);
+}
+
+/* ===== Cards ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
+  margin-top:36px;
+}
+
+.card{
+  position:relative;
+  padding:24px;
+  border-radius:22px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.25),
+      rgba(255,255,255,.08)
+    ),
+    var(--glass-bg);
+  backdrop-filter:blur(24px);
+  border:1px solid var(--glass-border);
+  box-shadow:var(--shadow-soft);
+  transition:.45s cubic-bezier(.2,.8,.2,1);
+  cursor:pointer;
+}
+
+/* Edge glow */
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);
+  opacity:.4;
+  pointer-events:none;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:var(--shadow-strong);
+}
+
+.card h3{
+  color:var(--primary);
+  margin-bottom:6px;
+}
+
+/* ===== Card image ===== */
+.card-image{
+  height:150px;
+  border-radius:18px;
+  overflow:hidden;
+  margin-bottom:16px;
+  border:1px solid rgba(255,255,255,.3);
+}
+
+.card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ===== Expand content ===== */
+.extra{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .45s ease;
+  color:var(--muted);
+}
+
+.card.open .extra{
+  max-height:320px;
+  margin-top:12px;
+}
+
+/* ===== Gallery ===== */
+/* .gallery{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:26px;
+} */
+
+/* .gallery-item{
+  border-radius:24px;
+  overflow:hidden;
+  border:1px solid var(--glass-border);
+  background:var(--glass-bg-strong);
+  backdrop-filter:blur(24px);
+  box-shadow:var(--shadow-soft);
+  transition:.4s;
+} */
+
+/* .gallery-item:hover{
+  transform:scale(1.05);
+} */
+
+/* ===== Footer ===== */
+.site-footer{
+  margin:100px 0 40px;
+  text-align:center;
+  color:var(--muted);
+}
+
+/* ===== Reveal ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:.8s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:26px;
+  margin-top:32px;
+}
+
+.gallery-item{
+  position:relative;
+  aspect-ratio:1 / 1;
+  border-radius:24px;
+  overflow:hidden;
+
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(22px);
+  border:1px solid rgba(255,255,255,.25);
+  box-shadow:0 16px 40px rgba(0,0,0,.45);
+  transition:.4s;
+}
+
+.gallery-item:hover{
+  transform:scale(1.04);
+}
+
+.gallery-item img,
+.gallery-item video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}

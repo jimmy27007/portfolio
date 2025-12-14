@@ -1,0 +1,19 @@
+body.light{
+  --bg1:#ECE5DD;
+  --bg2:#FFFFFF;
+
+  --glass-bg:rgba(255,255,255,.7);
+  --glass-bg-strong:rgba(255,255,255,.9);
+  --glass-border:rgba(0,0,0,.15);
+  --glass-highlight:rgba(255,255,255,.9);
+
+  --text:#111B21;
+  --muted:#4A5A63;
+
+  --shadow-strong:0 40px 120px rgba(0,0,0,.2);
+  --shadow-soft:0 10px 30px rgba(0,0,0,.15);
+}
+
+body.light #matrix{
+  opacity:.12;
+}
