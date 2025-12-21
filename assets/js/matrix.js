@@ -8,7 +8,7 @@ function resize(){
 resize();
 window.addEventListener("resize", resize);
 
-const chars = "01ΣμσβλΔπΩΨΦΓΘΛΞDATA";
+const chars = "❤️❤️❤️❤️👌👌👌😁😁😍😍😍😂😂🤣🤣💕💕🙌";
 const fontSize = 16;
 let columns = Math.floor(canvas.width / fontSize);
 let drops = Array(columns).fill(1);
