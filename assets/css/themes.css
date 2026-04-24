@@ -1,0 +1,72 @@
+body.light {
+  --bg1: #edf7f7;
+  --bg2: #f9fcfc;
+  --bg3: #e4eef1;
+  --text: #17303b;
+  --muted: #4d6974;
+  --primary: #2f8299;
+  --secondary: #49a6a9;
+  --accent: #6f7693;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --border: rgba(44, 101, 122, 0.2);
+  --shadow-lg: 0 28px 70px rgba(22, 58, 74, 0.16);
+  --shadow-md: 0 10px 26px rgba(22, 58, 74, 0.12);
+}
+
+body.light .kicker {
+  color: #17303b;
+  background: rgba(47, 130, 153, 0.16);
+  border-color: rgba(47, 130, 153, 0.34);
+}
+
+body.light .pill {
+  color: #17303b;
+  background: rgba(47, 130, 153, 0.14);
+  border-color: rgba(47, 130, 153, 0.28);
+}
+
+body.light .btn-primary {
+  color: #f8ffff;
+}
+
+body.light .btn-secondary {
+  background: rgba(23, 48, 59, 0.09);
+  color: #17303b;
+}
+
+body.light .card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.82));
+}
+
+body.light .card-image::after {
+  background: linear-gradient(135deg, rgba(47, 130, 153, 0.1), rgba(111, 118, 147, 0.12));
+}
+
+body.light .timeline-item {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+body.light .social-links .social-threads,
+body.light .social-links .social-x {
+  color: #111111;
+}
+
+body.light .command-panel {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+body.light .command-panel input {
+  color: #17303b;
+  border-bottom-color: rgba(23, 48, 59, 0.16);
+}
+
+body.light .command-results button {
+  color: #4d6974;
+}
+
+body.light .command-results button:hover,
+body.light .command-results button.active {
+  background: rgba(23, 48, 59, 0.08);
+  color: #17303b;
+}
