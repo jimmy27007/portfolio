@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jimmy27007.github.io/portfolio/sitemap.xml
